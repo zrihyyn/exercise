@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style33/style33.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의성어</title>
+</head>
+<body>
+    <button id="toggleAnimationBtn">모든 의성어와 의태어, 일시정지!</button>
+    <p id="a">에스</p>
+    <p id="aa">(살어리 살어리랏다 쳥산애 살어리랏다)</p>
+    <p id="b">선, 부릉부릉 부르릉,</p>
+    <p id="c">어떤 버스의,</p>
+    <p id="d">플랫, 플랫, 플랫폼 위</p>
+    <p id="e">딩동댕, 딩동댕,</p>
+    <p id="f">정오 언저리, 벙거지 하나를 쓰고 있던,
+    <p id="fa">삐적삐적 뿌직뿌직,</p>
+    <p id="g">우스꽝스러운 우스개 하나, 갑작스레,</p>
+    <p id="h">울그락불그락, 울그락불그락,</p>
+    <p id="i">성난 얼굴로 제 옆 사람을 향해,</p>
+    <p id="j">(휘리릭, 휘리릭)</p>
+    <p id="k">몸을 돌리고 나서, </p>
+    <p id="ka">흠, 흠, 흠,</p>
+    <p id="l">그에게 "이봐요, 아저씨, 일부러 밀지 좀 마시라고요"라고 말한다. 여기서 끝. 그렇게 하고는,</p>
+    <p id="m">후다닥, 후다닥,</p>
+    <p id="n">비어 있는 자리로 몸을 던지고, 살짝궁, 거기에 앉는다.</p>
+    <p id="o">같은 날, 딩동댕, 딩동댕,</p>
+    <p id="p">잠시 후, 나는</p> 
+    <p id="q">삐적삐적 뿌직뿌직,</p>
+    <p id="r">또다른 우스개 하나와 동행 중인 그를 다시 보았는데, 외투의 단추를 두고 수다를 떨고 있었다.</p>
+    <p id="s">(덜덜덜, 덜덜덜, 덜덜덜,</p>
+    <p id="t">생각한 것만큼 날씨가 그렇게 따뜻하지는 않네 ... ...) 이렇게 끝</p>
+
+    <script>
+        // 버튼 요소 찾기
+        const toggleAnimationBtn = document.getElementById('toggleAnimationBtn');
+
+        // 애니메이션 상태 변수
+        let animationEnabled = true;
+
+        // 버튼 클릭 시 애니메이션 On/Off 및 텍스트 변경
+        toggleAnimationBtn.addEventListener('click', function() {
+            // 애니메이션 상태에 따라 반대로 변경
+            animationEnabled = !animationEnabled;
+
+            // 모든 <p> 요소 찾기
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach(paragraph => {
+                // 애니메이션 적용 여부에 따라 CSS 속성 조작
+                if (animationEnabled) {
+                    paragraph.style.animationPlayState = 'running'; // 애니메이션 다시 시작
+                    toggleAnimationBtn.textContent = '모든 의성어와 의태어, 일시정지!'; // 버튼 텍스트 변경
+                } else {
+                    paragraph.style.animationPlayState = 'paused'; // 애니메이션 일시 정지
+                    toggleAnimationBtn.textContent = '다시 움직이기!'; // 버튼 텍스트 변경
+                }
+            });
+        });
+    </script>
+</body>
+</html>

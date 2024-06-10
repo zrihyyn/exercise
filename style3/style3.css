@@ -1,0 +1,266 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  word-break: keep-all;
+  font-family: "helvetica", sans-serif;
+  font-weight: normal;
+}
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+.first {
+  display: block;
+  width: 100%;
+  background-color: darkolivegreen;
+  height: 100%;
+  cursor: pointer;
+}
+
+.container {
+  margin: 20px;
+}
+
+p1, #jump { /* p1 요소와 #jump 요소 초기 상태 숨기기 */
+  display: none;
+  font-weight: normal;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  cursor: pointer;
+  margin: 5px;
+  align-items: center;
+  justify-items: center;
+}
+
+#a {
+  background-color: bisque;
+}
+
+#b {
+  background-color: azure;
+}
+
+#c {
+  background-color: beige;
+}
+
+#d {
+  background-color: lightgray;
+  width: 790px;
+  line-height: 33px;
+}
+
+#e {
+  background-color: khaki;
+}
+
+#f {
+  background-color: dimgrey;
+}
+
+#g {
+  background-color: lavender;
+}
+
+#h {
+  background-color: beige;
+}
+
+#final {
+  background-color: blanchedalmond;
+}
+
+#jump {
+  background-color: lightskyblue;
+  float: right;
+  text-decoration: none;
+  color: black;
+  padding: 13px;
+  margin: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  font-size: 20px;
+  display: none; /* 초기 상태 숨기기 */
+}
+
+#again {
+  display: block;
+  font-weight: normal;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 13px;
+  cursor: pointer;
+  margin: 5px;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  float: left;
+  clear: left;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.second {
+  display: block;
+  width: 100%;
+  background-color: darkred;
+  height: 100%;
+  cursor: pointer;
+}
+
+.nextcontainer {
+  margin: 20px;
+}
+
+p, #again { /* p 요소와 #again 요소 초기 상태 숨기기 */
+  display: none;
+  font-weight: normal;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 15px;
+  cursor: pointer;
+  margin: 5px;
+  align-items: center;
+  justify-items: center;
+}
+
+p {
+  float: right;
+  clear: right;
+}
+
+#again {
+  float: left;
+  clear: both;
+  margin-bottom: 30px;
+}
+
+#aa {
+  background-color: pink;
+}
+
+#ab {
+  background-color: rgb(236, 197, 197);
+}
+
+#ac {
+  background-color: rgb(255, 238, 238);
+  line-height: 33px;
+  max-width: 800px;
+}
+
+#ad {
+  background-color: rgb(255, 123, 158);
+  width: 790px;
+}
+
+#ae {
+  background-color: rgb(255, 171, 193);
+}
+
+#afa {
+  background-color: rgb(255, 255, 255);
+}
+
+#afb {
+  background-color: rgb(255, 255, 255);
+}
+
+#afc {
+  background-color: pink;
+}
+
+#afd {
+  background-color: rgb(249, 189, 220);
+}
+
+#afe {
+  background-color: lightpink;
+}
+
+#aff {
+  background-color: rgb(255, 235, 235);
+  width: 890px;
+  line-height: 33px;
+}
+
+#ag {
+  background-color: rgb(255, 122, 122);
+}
+
+#ah {
+  background-color: rgb(215, 136, 164);
+}
+
+#ai {
+  background-color: rgb(255, 105, 105);
+}
+
+#afinal {
+  background-color: lightcoral;
+}
+
+#asemi {
+  background-color: rgb(255, 233, 233);
+}
+
+#aj {
+  background-color: rgb(234, 108, 108);
+}
+
+#ak {
+  background-color: rgb(255, 205, 205);
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 33px;
+}
+
+#al {
+  background-color: rgb(255, 172, 172);
+}
+
+#am {
+  background-color: rgb(255, 108, 108);
+}
+
+#an {
+  background-color: rgb(255, 185, 185);
+}
+
+.third {
+  display: block;
+  width: 100%;
+  background-color: rgb(152, 152, 152);
+  height: 100%;
+}
+.third p2 {
+  display: block;
+  font-weight: normal;
+  max-width: 40vw;
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 30px;
+  margin: auto;
+  margin-top: 30vh;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  line-height: 28px;
+}/*# sourceMappingURL=style3.css.map */

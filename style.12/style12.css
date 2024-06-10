@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+
+body, main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#words {
+  padding: 1em;
+  font-size: 0.8rem;
+  line-height: 140%;
+  text-align: center;
+  z-index: 5;
+  mix-blend-mode: exclusion;
+  color: #fff;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome, Edge, Opera and Firefox */
+}
+
+h3 {
+  line-height: 120%;
+}
+
+#words p {
+  line-height: 140%;
+}
+
+#words.scrollY {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#words.cycle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#words.cycle .w {
+  padding: 1em;
+  flex-grow: 1;
+}
+
+#words.cycle .w:hover {
+  text-shadow: 0 0 20px #fff, 0 0 20px #fff;
+}
+
+#words.cycle .w[done]:hover {
+  text-shadow: none;
+}
+
+.top {
+  position: absolute;
+  top: 1em;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 1em;
+}
+
+.nothoverBlur, #words.nothoverBlur {
+  filter: blur(3px);
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+}
+
+.nothoverBlur:hover, #words.nothoverBlur:hover {
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  filter: blur(0);
+}
+
+.bgnothoverBlur, #words.bgnothoverBlur {
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+}
+
+.bgnothoverBlur:hover, #words.bgnothoverBlur:hover {
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+}
+
+.dark, #words.dark {
+  color: #fff;
+  text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+  outline: 1px solid #000;
+  mix-blend-mode: lighten;
+}
+
+.pink, #words.pink {
+  color: hotpink;
+}
+
+.larger, *.larger {
+  font-size: 1.5rem !important;
+  line-height: 90% !important;
+}
+
+.largest, *.largest {
+  font-size: 2.5rem !important;
+  line-height: 90% !important;
+}
+
+.largestest, *.largestest {
+  font-size: 3.5rem !important;
+}
+
+.largestest p, *.largestest p {
+  line-height: 90% !important;
+}
+
+.hoverDark:hover {
+  background: #d4d4d4;
+  mix-blend-mode: exclusion;
+}
+
+iframe.full {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#words.hoverWow span {
+  padding: 0.25em;
+  display: inline-block;
+  line-height: 150%;
+  opacity: 0.4;
+  transition: opacity ease-in 200ms;
+  transition-delay: 120ms;
+}
+
+#words.hoverWow span:hover {
+  opacity: 0.8;
+  transition: opacity 50ms linear;
+}/*# sourceMappingURL=style12.css.map */

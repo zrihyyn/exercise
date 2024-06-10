@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style16/style16.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <title>식물학 수업</title>
+</head>
+<body>
+    <div id="container">
+        <div id="text">
+            흐드러지게 만개한 해바라기 꽃잎 아래에서
+            <img src="/sunflower-4329176_1280.png" class="inline"/>
+            대파 한 단
+            <img src="/대파.png" class="inline"/>
+            이 거푸 썩을 만큼 오래 기다린 끝에, 나는 페레 농원
+            <img src="/농원.png" class="inline"/>
+            행 커다란 호박마차
+            <img src="/pump.png" class="inline"/>
+            하나에 나 자신을 접목
+            <img src="/접목.png" class="inline"/>
+            하고 있었다. 거기서 나는 애호박
+            <img src="/애호박.png" class="inline"/>
+            하나를 씨 맺은 줄기까지 통째로 땅에서 뽑아냈는데, 넝쿨
+            <img src="/넝쿨.png" class="inline"/>
+            을 두른, 커다란 레몬
+            <img src="/lemon.png" class="inline"/>
+            만 한 머리통이 꽃봉오리
+            <img src="/flower.png" class="inline"/>
+            를 이루고 있었다. 그리고 이 풋고추
+            <img src="/putco.png" class="inline"/>
+            는 자기 화단
+            <img src="/garden.png" class="inline"/>
+            을 마구 밟고 다녔다고 또 양파
+            <img src="/onion.png" class="inline"/>
+            를 밟아 으깨었다고 밋밋한 순무
+            <img src="/sunmoo.png" class="inline"/>
+            하나를 골라 질책 다발로 꽃
+            <img src="/real flower.png" class="inline"/>
+            을 피우기 시작한다. 하지만 대추야자
+            <img src="/daechu.png" class="inline"/>
+            가 우수수 떨어지는데 대체 무슨 상관이람! 밤나무
+            <img src="/bam tree.png" class="inline"/>
+            의 떨어지는 밤송이
+            <img src="/bam.png" class="inline"/>
+            그 가시를 피하면서, 그는 미지의 터에 묘목
+            <img src="/myo.png" class="inline"/>
+            을 심으려고 이동했다. 잠시 뒤 나는 교외 거주자들이 모이곤 하는 온실 앞에서 그 풋고추
+            <img src="/putco.png" class="inline"/>
+            를 다시 보았다. 그는 자신의 화관
+            <img src="/ghkrhks.png" class="inline"/>
+            저 상부에 병아리콩
+            <img src="/chick.png" class="inline"/>
+            을 하나 삽목
+            <img src="/삽목.png" class="inline"/>
+            하려고 진지하게 검토하는 중이었다.
+        </div>
+    </div>
+     <div class="jumpinto">
+            <a href="/5_3geometry.html"><img src="/geometry.png"></img></a>
+        </div>
+    <div class="popover"></div>
+    <script>
+        var mouse = { x: 0, y: 0 },
+            offset = { x: 0, y: 0 }; // 커서와 이미지 사이의 거리 조정
+        $('.inline').on('mouseenter', function() {
+            var src = $(this).attr('src');
+            $('.popover').html('<img src="' + src + '">').show();
+            offset.x = -($('.popover').width() / 2) + 20; // 중앙 정렬 후 x offset
+            clearTimeout(this.timer);
+        }).on('mouseleave', function() {
+            this.timer = setTimeout(function() {
+                $('.popover').hide();
+            }, 10);
+        });
+        document.addEventListener('mousemove', function(e) {
+            mouse.x = e.pageX;
+            mouse.y = e.pageY;
+            $('.popover').css({
+                left: (mouse.x + offset.x) + 'px',
+                top: (mouse.y + offset.y) + 'px'
+            });
+        });
+    </script>
+    <script>
+        function myFunction() {
+            document.getElementById("popup").style.display = 'none';
+        }
+    </script>
+</body>
+</html>

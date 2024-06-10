@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style22/style22.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>품사로 분해하기</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="week">
+        <div class="title">실사</div>
+        <div class="content">
+         일(日), 정오, 승강대, 버스, S선, 근처, 몽소, 공원, 남자, 목, 모자, 끈, 장소, 리본, 이웃, 발, 횟수, 승객, 논쟁, 자리, 시간, 역, 성(聖), 라자르, 대화, 동료, 앞섶, 외투, 재단사, 단추.
+        </div>
+    </div>
+    
+    <div class="week">
+        <div class="title">형용사</div>
+        <div class="content">
+            뒤에, 가득찬, 둘러싸인, 커다란, 자유로운, 긴, 꼰.
+        </div>
+    </div>
+    
+    <div class="week">
+        <div class="title">동사</div>
+        <div class="content">
+            알아채다, 지니다, 호출하다, 주장하다, 하다, 걷다, 오르다, 내리다, 포기하다, 던지다, 다시 보다, 말하다, 줄이다, 시키다, 올리다.
+        </div>
+    </div>
+
+    <div class="week">
+        <div class="title">대명사</div>
+        <div class="content">
+            나, 그, 그것, 그 자신, 그의, 누구의, 후자, 무엇, 매번, 모두, 몇몇.
+        </div>
+    </div>
+    <div class="week">
+        <div class="title">부사</div>
+        <div class="content">
+            조금, 가까이, 강한, 일부러, 다른 곳에, 재빨리, 보다, 늦은.
+        </div>
+    </div>
+    <div class="week">
+        <div class="title">전치사</div>
+        <div class="content">
+            ~향하여, ~위에, ~의, ~으로, ~앞, ~와 함께, ~에 의해, ~에게, ~더불어, ~에 의해, ~에.
+        </div>
+    </div>
+    <div class="week">
+        <div class="title">접속사</div>
+        <div class="content">
+            ~이하, 또는.
+        </div>
+    </div>
+    <div class="week">
+        <div class="title">Comment: "품사로 분해하기"에 대한 이야기..</div>
+        <div class="content">
+            간단해 보이는 이 문체 [품사로 분해하기]는, 그러나 눈여겨보면 기이한 점이 하나씩 발견되기 시작한다. 한국어판에서는 번역이 불가능해 생략한 맨 첫 줄 관사에서,
+            상식적으로 문장구성상 <u><i>반드시 들어갈 수 밖에 없는 남성형 부정관사('un')가 없다</i></u> 는 점도 기이하지만, 분해되어 열거된 단어들 순서가 얼핏 이야기 흐름을 충실히
+            따르는 듯해도 곳곳에 예외가 숨어 있어, 전체적으로 <u><i>일관성이 결여되어 있다는 인상</i></u> 을 받는다. 이는 [문체 연습]에 사실상 <u><i>파불라가 부재한다는 사실과 연관</i></u> 되는 듯하다.
+            크노는 저본, 즉 '파불라'가 무엇인지 구체적으로 언급한 적이 없다. 1[약기]와 16[객관적 이야기] 역시, 흔히 간주하듯 파불라는 아니며, 단지 몇몇 텍스트에서 그 역할을 할 뿐이고,
+            이마저도 변주되어 활용될 뿐이다.
+            <br> 
+            <br>
+            분해된 품사들을 전부 사용하여 이야기를 구성하는 식으로 '연습'을 해보면 어떨까. 다음으로는 <a href="/6_2grid.html">구조 분석</a> 문체를 살펴볼 것이다.
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.title').click(function(){
+                $(this).parents('.week').find('.content').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

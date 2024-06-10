@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Director";
+    src: url("https://hub.xpub.nl/chopchop/~v/hdwgh/fonts/Director-Light.otf");
+  }
+  
+  * {
+    margin: 0;
+    font-family: "Director";
+    padding: 0;
+    box-sizing: border-box;
+    word-break: keep-all;
+  }
+  
+  body {
+    background-color: #404040;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  div.photo-container {
+    max-width: 25em;
+    height: auto;
+    position: relative;
+    margin: 1.563em auto;
+    img {
+      justify-content: center;
+      display: inline-block;
+    }
+  }
+  
+  div.photo-container a {
+    text-decoration: none;
+    color: black;
+    cursor: default;
+    font-weight: normal;
+  }
+  
+  div.photo-container a span {
+    letter-spacing: 10px;
+    visibility: hidden;
+    position: absolute;
+    background: #ffff6b;
+    width: 19em;
+    border: 1px solid #404040;
+    font-size: 0.8em;
+    padding: 0.7em 0.9em;
+    cursor: default;
+    line-height: 1.8;
+  }
+  
+  div.photo-container a:hover span {
+    visibility: visible;
+  }
+  
+  .telegram {
+    letter-spacing: 10px;
+    visibility: hidden;
+    position: absolute;
+    background: #ffff6b;
+    width: 19em;
+    border: 1px solid #404040;
+    font-size: 0.8em;
+    padding: 0.7em 0.9em;
+    cursor: default;
+    line-height: 1.8;
+  }
+  
+  div.photo-container .telegram:hover span {
+    visibility: visible;
+  }
+  
+  #first {
+    position: absolute;
+    top: 80px;
+    left: -30px;
+  }
+  
+  #second {
+    position: absolute;
+    transform: scale(0.5);
+    left: 320px;
+    top: 400px;
+  }
+  
+  #third {
+    position: absolute;
+    transform: scale(0.5);
+    left: 480px;
+  }
+  
+  #fourth {
+    position: absolute;
+    transform: scale(0.6);
+    left: -500px;
+  }
+  
+  .span-first {
+    left: 19em;
+    top: 2em;
+  }
+  
+  .span-second {
+    left: 50em;
+    top: 6em;
+    z-index: 1;
+  }
+  .span-third {
+    left: 50em;
+    top: 6em;
+    z-index: 1;
+  }
+
+  
+  div.photo-container a:hover .span-first {
+    visibility: visible;
+  }
+  
+  div.photo-container a:hover .span-second {
+    visibility: visible;
+  }
+  
+
+  div.photo-container a:hover .span-third {
+    visibility: visible;
+  }
+  
+  #third:hover{
+    opacity: 50%;
+  }
+
+  #first:hover{
+    opacity: 70%;
+  }
+
+  #second:hover{
+    opacity: 60%;
+  }
+
+  

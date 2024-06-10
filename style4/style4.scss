@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    word-break: keep-all;
+    font-family:sans-serif;
+    font-weight: normal;
+    line-height: 29px;
+    box-sizing: border-box;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    background-color:ghostwhite;
+    overflow-y: hidden;
+}
+
+main{
+    display: block;
+    height: 100vh;
+    overflow-y:scroll;
+    scroll-snap-type: y mandatory;
+    margin-bottom: 20px;
+}
+
+section{
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 2vw 4vw;
+    pointer-events: none;
+}
+
+h1{
+    align-self: flex-start;
+    margin: 10px;
+    font-weight: normal;
+    font-size: 1.5vw;
+    color: black;
+    transition: all 0.5s;
+}
+h2{
+    top:30%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border-style: dotted;
+    border-radius: 100px;
+    padding: 12px;
+}
+h3{
+    top:50%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border-style:dotted;
+    border-radius: 100px;
+    padding: 12px;
+}
+
+a{
+    top:30%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border-style: dotted;
+    border-radius: 100px;
+    padding: 12px;
+    cursor:pointer;
+    text-decoration: none;
+    pointer-events: auto; 
+}
+
+p11{ display: block;
+    font-weight: normal;
+    max-width: fit-content;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+    /* 추가된 스타일 */
+    margin-left: auto;
+}
+p2{
+    display:block;
+    font-weight: normal;
+    max-width:fit-content;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+    
+}
+p3{
+    display:block;
+    font-weight: normal;
+    max-width:fit-content;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+    
+}
+p33{
+    display:block;
+    font-weight: normal;
+    max-width:fit-content;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+    margin-left: auto;
+    
+}
+
+p4{
+    display:block;
+    font-weight: normal;
+    max-width:fit-content;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+   
+}
+p44{
+    display:block;
+    font-weight: normal;
+    max-width:fit-content;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+    margin-left: auto;
+   
+}
+p5{
+    display:block;
+    font-weight: normal;
+    max-width:fit-content;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+    
+}

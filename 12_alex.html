@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style6/style6.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알렉상드랭</title>
+</head>
+<body>
+    <a id="sonnet" href="/12_1sonnet.html">소네트의 형식으로 감상하기</a> 
+    <div class="lines">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+        <div class="line5"></div>
+        <div class="line6"></div>
+        <div class="line7"></div>
+    </div>
+    <div class="container">
+        <div class="left">
+            모일, 에스 문양<br>불평과 불만을<br>하나 마주하네!<br>줄 하나 있었네,<br>따분한 겉모습,<br>엄청난 목덜미,<br>그를 구타했다<br>늙은 시민 있어,<br>집에서 끼니 때<br>그를 쫓겠는가,<br>추문은 없었다<br>자리로 내빼어<br>나 좌 피안으로<br>이 추한 작자 또<br>동행한 저 바보<br>"자네 단추 여기
+        </div>
+        <div class="right">
+            버스, 나란 남자,<br>터뜨리는 작자<br>터번의 주위에<br>리본의 자리에.<br>이 새파란 종자,<br>썩은 내 풍기자<br>떠밀었다 말한<br>그 누가 소박한<br>시간을 들여서<br>숨차게 달려서.<br>침울한 모씨가<br>뻘쭘 앉았는가.<br>다시 돌아오네<br>눈에 들어오네<br>멋쟁이 말하지<br>달면 곤란하지."
+        </div>
+    </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+  const sonnetLink = document.getElementById('sonnet');
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  const triggerPosition = document.body.scrollHeight - window.innerHeight - 200; // Adjust as needed
+
+  if (scrollPosition >= triggerPosition) {
+    sonnetLink.style.display = 'block';
+  } else {
+    sonnetLink.style.display = 'none';
+  }
+});
+    </script>
+</body>
+</html>

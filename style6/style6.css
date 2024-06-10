@@ -1,0 +1,1352 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 33px;
+  box-sizing: border-box;
+  word-break: keep-all;
+  font-family: "helvetica", sans-serif;
+  font-weight: normal;
+}
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+#sonnet {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  padding: 5px;
+  z-index: 1000;
+  display: none; /* Initially hidden */
+  text-decoration: none;
+  color: cadetblue;
+  cursor: pointer;
+}
+
+.container {
+  letter-spacing: 2px;
+  position: absolute;
+  display: flex;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+}
+.container .left {
+  padding-right: 20px;
+  margin: auto;
+  margin-right: 0;
+}
+.container .right {
+  padding-left: 20px;
+  margin: auto;
+  margin-left: 0;
+}
+
+.lines {
+  position: relative;
+  height: 100%;
+}
+.lines .line1 {
+  position: absolute;
+  border: dashed black 1px;
+  width: 90%;
+  height: 5px;
+  top: 19vh;
+  left: 20px;
+}
+.lines .line2 {
+  position: absolute;
+  border: dashed black 1px;
+  width: 50%;
+  height: 5px;
+  top: 80.5vh;
+  left: 30vw;
+}
+.lines .line3 {
+  position: absolute;
+  border: dashed black 1px;
+  width: 100vh;
+  height: 3px;
+  top: 50.5vh;
+  left: 0;
+  rotate: 90deg;
+}
+.lines line4 {
+  position: absolute;
+  border: dashed black 1px;
+  width: 80vh;
+  height: 3px;
+  top: 50vh;
+  left: 36.5vw;
+  rotate: 90deg;
+}
+.lines line5 {
+  position: absolute;
+  border: dashed black 1px;
+  width: 80vh;
+  height: 3px;
+  top: 50vh;
+  left: 17.5vw;
+  rotate: 90deg;
+}
+.lines .line6 {
+  position: absolute;
+  border-top: dashed black 1px;
+  border-bottom: dashed black 1px;
+  width: 80vh;
+  height: 9px;
+  top: 50vh;
+  left: 27vw;
+  rotate: 90deg;
+}
+.lines .line7 {
+  position: absolute;
+  border: dashed black 1px;
+  width: 500vh;
+  height: 2.4px;
+  top: 60vh;
+  left: 60vw;
+}
+.lines .line8 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line8:hover {
+  transform: scale(1.1);
+}
+.lines .line9 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line9:hover {
+  transform: scale(1.1);
+}
+.lines .line10 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line10:hover {
+  transform: scale(1.1);
+}
+.lines .line11 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line11:hover {
+  transform: scale(1.1);
+}
+.lines .line12 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line12:hover {
+  transform: scale(1.1);
+}
+.lines .line13 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line13:hover {
+  transform: scale(1.1);
+}
+.lines .line14 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line14:hover {
+  transform: scale(1.1);
+}
+.lines .line15 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line15:hover {
+  transform: scale(1.1);
+}
+.lines .line16 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line16:hover {
+  transform: scale(1.1);
+}
+.lines .line17 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line17:hover {
+  transform: scale(1.1);
+}
+.lines .line18 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line18:hover {
+  transform: scale(1.1);
+}
+.lines .line19 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line19:hover {
+  transform: scale(1.1);
+}
+.lines .line20 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line20:hover {
+  transform: scale(1.1);
+}
+.lines .line21 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line21:hover {
+  transform: scale(1.1);
+}
+.lines .line22 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line22:hover {
+  transform: scale(1.1);
+}
+.lines .line23 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line23:hover {
+  transform: scale(1.1);
+}
+.lines .line24 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line24:hover {
+  transform: scale(1.1);
+}
+.lines .line25 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line25:hover {
+  transform: scale(1.1);
+}
+.lines .line26 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line26:hover {
+  transform: scale(1.1);
+}
+.lines .line27 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line27:hover {
+  transform: scale(1.1);
+}
+.lines .line28 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line28:hover {
+  transform: scale(1.1);
+}
+.lines .line29 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line29:hover {
+  transform: scale(1.1);
+}
+.lines .line30 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line30:hover {
+  transform: scale(1.1);
+}
+.lines .line31 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line31:hover {
+  transform: scale(1.1);
+}
+.lines .line32 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line32:hover {
+  transform: scale(1.1);
+}
+.lines .line33 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line33:hover {
+  transform: scale(1.1);
+}
+.lines .line34 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line34:hover {
+  transform: scale(1.1);
+}
+.lines .line35 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line35:hover {
+  transform: scale(1.1);
+}
+.lines .line36 {
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+.lines .line36:hover {
+  transform: scale(1.1);
+}
+.lines .line8 {
+  position: absolute;
+  border: dotted darkgray 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: -315px;
+  rotate: -90deg;
+  color: darkgray;
+}
+.lines .line9 {
+  position: absolute;
+  border: dotted rgb(101, 101, 101) 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: -280px;
+  rotate: -90deg;
+  color: rgb(101, 101, 101);
+}
+.lines .line10 {
+  position: absolute;
+  border: dotted black 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: -200px;
+  rotate: -90deg;
+}
+.lines .line11 {
+  position: absolute;
+  border-top: dotted rgb(155, 155, 155) 1px;
+  border-bottom: dotted rgb(155, 155, 155) 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: -130px;
+  rotate: -90deg;
+  color: rgb(155, 155, 155);
+}
+.lines .line12 {
+  position: absolute;
+  border: dotted rgb(203, 203, 203) 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: -70px;
+  rotate: -90deg;
+  color: rgb(203, 203, 203);
+}
+.lines .line13 {
+  position: absolute;
+  border: dotted rgb(43, 43, 43) 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: 20px;
+  rotate: -90deg;
+  color: rgb(43, 43, 43);
+}
+.lines .line14 {
+  position: absolute;
+  border: dotted black 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: 100px;
+  rotate: -90deg;
+}
+.lines .line15 {
+  position: absolute;
+  border: dotted darkgray 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: 125px;
+  rotate: -90deg;
+  color: darkgrey;
+}
+.lines .line16 {
+  position: absolute;
+  border: dotted rgb(196, 196, 196) 1px;
+  width: 100vh;
+  height: 2.4px;
+  top: 50vh;
+  left: 160px;
+  rotate: -90deg;
+  color: rgb(196, 196, 196);
+}
+.lines .line17 {
+  position: absolute;
+  border: dotted rgb(0, 0, 0) 1.5px;
+  width: 100vh;
+  height: 4.6px;
+  top: 50vh;
+  left: 230px;
+  rotate: -90deg;
+  color: rgb(0, 0, 0);
+}
+.lines .line18 {
+  position: absolute;
+  border: dotted rgb(53, 53, 53) 1px;
+  width: 100vh;
+  height: 4.6px;
+  top: 50vh;
+  left: 330px;
+  rotate: -90deg;
+  color: rgb(53, 53, 53);
+}
+.lines .line19 {
+  position: absolute;
+  border: dotted rgb(157, 157, 157) 1px;
+  width: 100vh;
+  height: 3px;
+  top: 50vh;
+  left: 380px;
+  rotate: -90deg;
+  color: rgb(157, 157, 157);
+}
+.lines .line20 {
+  position: absolute;
+  border: dotted rgb(206, 206, 206) 1px;
+  width: 100vh;
+  height: 3px;
+  top: 50vh;
+  left: 420px;
+  rotate: -90deg;
+  color: rgb(206, 206, 206);
+}
+.lines .line21 {
+  position: absolute;
+  border: dotted rgb(232, 232, 232) 1px;
+  width: 100vh;
+  height: 3px;
+  top: 50vh;
+  left: 478px;
+  rotate: -90deg;
+  color: rgb(232, 232, 232);
+}
+.lines .line22 {
+  position: absolute;
+  border: dotted rgb(85, 85, 85) 1px;
+  width: 100vh;
+  height: 3px;
+  top: 50vh;
+  left: 500px;
+  rotate: -90deg;
+  color: rgb(85, 85, 85);
+}
+.lines .line23 {
+  position: absolute;
+  border-top: dotted rgb(0, 0, 0) 1.75px;
+  border-bottom: dotted rgb(0, 0, 0) 1.75px;
+  width: 100vh;
+  height: 10px;
+  top: 50vh;
+  left: 570px;
+  rotate: -90deg;
+  color: rgb(0, 0, 0);
+}
+.lines .line24 {
+  position: absolute;
+  border-top: dotted rgb(42, 42, 42) 1.3px;
+  border-bottom: dotted rgb(42, 42, 42) 1.3px;
+  width: 100vh;
+  height: 7px;
+  top: 50vh;
+  left: 596px;
+  rotate: -90deg;
+  color: rgb(42, 42, 42);
+}
+.lines .line25 {
+  position: absolute;
+  border: dotted rgb(137, 137, 137) 1px;
+  width: 100vh;
+  height: 4px;
+  top: 50vh;
+  left: 620px;
+  rotate: -90deg;
+  color: rgb(137, 137, 137);
+}
+.lines .line26 {
+  position: absolute;
+  border: dotted rgb(166, 166, 166) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 655px;
+  rotate: -90deg;
+  color: rgb(166, 166, 166);
+}
+.lines .line27 {
+  position: absolute;
+  border: dashed rgb(0, 0, 0) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 750px;
+  rotate: -90deg;
+  color: rgb(0, 0, 0);
+}
+.lines .line29 {
+  position: absolute;
+  border: dotted rgb(175, 175, 175) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 800px;
+  rotate: -90deg;
+  color: rgb(175, 175, 175);
+}
+.lines .line30 {
+  position: absolute;
+  border: dotted rgb(77, 77, 77) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 837px;
+  rotate: -90deg;
+  color: rgb(77, 77, 77);
+}
+.lines .line31 {
+  position: absolute;
+  border: dotted rgb(178, 178, 178) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 860px;
+  rotate: -90deg;
+  color: rgb(178, 178, 178);
+}
+.lines .line32 {
+  position: absolute;
+  border: dotted rgb(178, 178, 178) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 900px;
+  rotate: -90deg;
+  color: rgb(178, 178, 178);
+}
+.lines .line33 {
+  position: absolute;
+  border: dotted rgb(65, 65, 65) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 926px;
+  rotate: -90deg;
+  color: rgb(65, 65, 65);
+}
+.lines .line34 {
+  position: absolute;
+  border: dotted rgb(203, 203, 203) 1px;
+  width: 100vh;
+  height: 4px;
+  top: 50vh;
+  left: 979px;
+  rotate: -90deg;
+  color: rgb(203, 203, 203);
+}
+.lines .line35 {
+  position: absolute;
+  border: dotted rgb(176, 176, 176) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 1000px;
+  rotate: -90deg;
+  color: rgb(176, 176, 176);
+}
+.lines .line36 {
+  position: absolute;
+  border: dotted rgb(131, 131, 131) 1px;
+  width: 100vh;
+  height: 2px;
+  top: 50vh;
+  left: 1010px;
+  rotate: -90deg;
+  color: rgb(131, 131, 131);
+}
+.lines .line37 {
+  position: absolute;
+  border: dotted rgb(0, 0, 0) 1px;
+  width: 100vw;
+  height: 5px;
+  top: 80vh;
+  left: 0px;
+  rotate: 0deg;
+  color: rgb(0, 0, 0);
+}
+
+.line2::before {
+  font-size: 10px;
+  position: absolute;
+  content: "1) 알렉상드랭은";
+  transform: rotate(90deg);
+  top: -7vh;
+  left: -3.5ch;
+}
+
+.line2::after {
+  font-size: 10px;
+  content: "프랑스 시 및 극문학의 주요 운율이다.";
+  position: absolute;
+  top: -0.8ch;
+  left: 1ch;
+}
+
+.line3::before {
+  font-size: 10px;
+  content: "2) 한 행이 12음절로 이루어지며 이는 6음절의 두 반행(半行)으로 나뉜다.";
+  position: absolute;
+  max-width: 18ch;
+  left: 2ch;
+  top: 10px;
+  line-height: 20px;
+}
+
+.line3::after {
+  font-size: 10px;
+  content: "3) 알렉상드랭에는 제1, 2강세가 있는데, 제1강세는 각 반행의 마지막 음절, 제2강세는 각 반행의 중간에 위치한다";
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  line-height: 33px;
+  top: 1.4px;
+  left: 35ch;
+}
+
+.line7::before {
+  font-size: 10px;
+  content: "4) 알렉상드랭 시구는 '6음절 단순시구 + 휴지기 + 6음절 단순 시구'로 구성된다. 알렉상드랭을 구성하는 두 개의 6음절인 반구 사이에는 반드시 휴지가 와야한다. 한국의 대표적인 시 형식(3-4조 시조나 7-5조 민요)으로 원문을 옮겨볼까 고민하다가, 알렉상드랭 형식과 이 형식의 제약을 그대로 번역에서 재현하는 방법을 택했다. 번역은 특히 6음절의 규칙성을 살려내는 동시에, 이 '휴지'가 만들어낸 통사 단위의 의미 분절을 반영하고자 6음절 시구를 하나의 통사 단위로 자리매김하는 데 주안점을 두었다.앞의 행이 다음 행에 걸쳐 있는 2행의 마지막 'es-'와 3행의 첫머리 'Pèce'처럼 '앙장브망'도 번역에서 반영하려 시도했으며, 휴지를 중심으로 통사-의미의 단위가 구분된다는 점을 살리기 위해 휴지에 여백을 두어, 두번째 반구의 시작을 알리는 표시로 남겨보았다. 또한 전체 시에서 연 구분은 없으나 4행을 하나의 연으로 삼아 각운 체계를 살리고 있다는 점 역시 번역에서 반영하고자 했다.";
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  left: 100ch;
+  top: 3px;
+  line-height: 20px;
+}
+
+.line7::after {
+  font-size: 10px;
+  content: "알렉상드랭 형식을 취하여 이야기 전반을 재현하면서 크노는 의도적으로 표현의 웅장함이나 고급함에서 다소 탈피한다.";
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  line-height: 33px;
+  top: 201.4px;
+  left: 35ch;
+}
+
+.line8::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "하루의 정중앙이자";
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  left: 330px;
+  top: -45px;
+}
+
+.line8::after {
+  font-size: 10px;
+  content: "정오에,";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  left: 350px;
+  top: 0px;
+}
+
+.line9::before {
+  font-size: 11px;
+  transform: rotate(90deg);
+  content: "나는 S선";
+  position: absolute;
+  line-height: 28px;
+  max-width: 10px;
+  left: 500px;
+  top: -45px;
+}
+
+.line9::after {
+  font-size: 11px;
+  content: "그러니까 콩트르 스카르프에서 샹페레로 향하는";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  left: 430px;
+  top: -72px;
+}
+
+.line10::before {
+  font-size: 12px;
+  transform: rotate(90deg);
+  content: "거의 만원인데다";
+  text-align: right;
+  position: absolute;
+  max-width: 60px;
+  line-height: 20px;
+  left: 686px;
+  top: -45px;
+}
+
+.line10::after {
+  font-size: 12px;
+  content: "붐비는";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  left: 690px;
+  top: 0px;
+}
+
+.line11::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "어떤 버스 하나를";
+  text-align: right;
+  position: absolute;
+  max-width: 30px;
+  line-height: 18px;
+  left: 550px;
+  top: -45px;
+}
+
+.line11::after {
+  font-size: 10px;
+  content: "다시 말해 한 대중교통 차량의";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 18px;
+  left: 500px;
+  top: -23px;
+}
+
+.line12::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "승강대로";
+  position: absolute;
+  max-width: 10px;
+  line-height: 18px;
+  left: 250px;
+  top: -30px;
+}
+
+.line12::after {
+  font-size: 10px;
+  content: "즉 뒤쪽 갑판 위에 올라서 타 있었다.";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 18px;
+  left: 208px;
+  top: -38px;
+}
+
+.line13::before {
+  font-size: 11px;
+  transform: rotate(90deg);
+  text-align: right;
+  content: "나는 어떤 젊은 남자를,";
+  position: absolute;
+  max-width: 30px;
+  line-height: 25px;
+  left: 350px;
+  top: -73px;
+}
+
+.line13::after {
+  font-size: 11px;
+  content: "그것도 꽤 우스꽝스럽고 또 이만저만 희한하게 생긴 게 아닌 청춘의 끝물 하나를";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 22px;
+  left: 300px;
+  top: -120px;
+}
+
+.line14::before {
+  font-size: 13px;
+  transform: rotate(90deg);
+  text-align: right;
+  content: "예컨대 그의 말라빠진 목과";
+  position: absolute;
+  max-width: 50px;
+  line-height: 20px;
+  left: 500px;
+  top: -65px;
+}
+
+.line14::after {
+  font-size: 13px;
+  content: "야윈 목덜미를,";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 25px;
+  left: 500px;
+  top: -5px;
+}
+
+.line15::before {
+  font-size: 10.5px;
+  transform: rotate(90deg);
+  content: "쓰고 있는 모자랄까";
+  position: absolute;
+  max-width: 50px;
+  line-height: 20px;
+  left: 120px;
+  top: -35px;
+}
+
+.line15::after {
+  font-size: 10.5px;
+  content: "벙거지랄까 하는 테두리에 둘린";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 15px;
+  left: 100px;
+  top: -20px;
+}
+
+.line16::before {
+  font-size: 9px;
+  transform: rotate(90deg);
+  content: "가는 끈과";
+  position: absolute;
+  max-width: 20px;
+  line-height: 10px;
+  left: 750px;
+  top: -15px;
+}
+
+.line16::after {
+  font-size: 9px;
+  content: "꼬인 줄을";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 15px;
+  left: 750px;
+  top: 0px;
+}
+
+.line17::before {
+  font-size: 13px;
+  transform: rotate(90deg);
+  content: "보았고";
+  position: absolute;
+  max-width: 20px;
+  line-height: 20px;
+  left: 490px;
+  top: -27px;
+}
+
+.line17::after {
+  font-size: 13px;
+  content: "또 주목하고 있었다.";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 460px;
+  top: -10px;
+}
+
+.line18::before {
+  font-size: 12.5px;
+  transform: rotate(90deg);
+  content: "어떤 소란과";
+  text-align: right;
+  position: absolute;
+  max-width: 40px;
+  line-height: 20px;
+  left: 110px;
+  top: -37px;
+}
+
+.line18::after {
+  font-size: 12.5px;
+  content: "혼란이 있고 나서";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 85px;
+  top: -20px;
+}
+
+.line19::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "그는 자기 옆 사람";
+  position: absolute;
+  text-align: right;
+  max-width: 40px;
+  line-height: 15px;
+  left: 628px;
+  top: -27px;
+}
+
+.line19::after {
+  font-size: 10px;
+  content: "그러니까 일행이";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 40px;
+  line-height: 22px;
+  left: 600px;
+  top: -10px;
+}
+
+.line20::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "사람들이 매번 내리고";
+  position: absolute;
+  text-align: right;
+  max-width: 30px;
+  line-height: 20px;
+  left: 560px;
+  top: -40px;
+}
+
+.line20::after {
+  font-size: 10px;
+  content: "또한 빠져나갈 때마다";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 40px;
+  line-height: 29px;
+  left: 519px;
+  top: -25px;
+}
+
+.line21::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "그를 일부러 떠밀고";
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  line-height: 20px;
+  left: 300px;
+  top: -27px;
+}
+
+.line21::after {
+  font-size: 10px;
+  content: "괴롭힌다고";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 40px;
+  line-height: 29px;
+  left: 309px;
+  top: -10px;
+}
+
+.line22::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "울먹거리고";
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  line-height: 20px;
+  left: 420px;
+  top: -27px;
+}
+
+.line22::after {
+  font-size: 10px;
+  content: "질질 짜는 듯한";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 40px;
+  line-height: 20px;
+  left: 400px;
+  top: -5px;
+}
+
+.line23::before {
+  font-size: 16px;
+  transform: rotate(90deg);
+  content: "목소리와";
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  line-height: 20px;
+  left: 120px;
+  top: -27px;
+}
+
+.line23::after {
+  font-size: 16px;
+  content: "어조로";
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 40px;
+  line-height: 29px;
+  left: 109px;
+  top: -10px;
+}
+
+.line24::before {
+  font-size: 12px;
+  transform: rotate(90deg);
+  content: "발설하며";
+  position: absolute;
+  word-break: break-all;
+  max-width: 30px;
+  line-height: 20px;
+  left: 680px;
+  top: -27px;
+}
+
+.line24::after {
+  font-size: 12px;
+  content: "쏘아붙인다.";
+  word-break: break-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 60px;
+  line-height: 29px;
+  left: 650px;
+  top: -3px;
+}
+
+.line25::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  text-align: right;
+  content: "이 사실을 표명하고";
+  position: absolute;
+  word-break: keep-all;
+  max-width: 35px;
+  line-height: 15px;
+  left: 380px;
+  top: -37px;
+}
+
+.line25::after {
+  font-size: 10px;
+  content: "그러니까 입밖으로 내고 나서는,";
+  word-break: break-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 36px;
+  line-height: 29px;
+  left: 309px;
+  top: -43px;
+}
+
+.line26::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  text-align: right;
+  content: "그는 비어 있고 또 아무도 없는 자리 하나";
+  position: absolute;
+  word-break: keep-all;
+  max-width: 40px;
+  line-height: 15px;
+  left: 790px;
+  top: -67px;
+}
+
+.line26::after {
+  font-size: 10px;
+  content: "즉 공석을";
+  word-break: break-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 20px;
+  line-height: 29px;
+  left: 700px;
+  top: -33px;
+}
+
+.line27::before {
+  font-size: 13px;
+  transform: rotate(90deg);
+  text-align: right;
+  content: "향해 서두르며";
+  position: absolute;
+  word-break: keep-all;
+  max-width: 40px;
+  line-height: 22px;
+  left: 355px;
+  top: -37px;
+}
+
+.line27::after {
+  font-size: 13px;
+  content: "또 그리로 향한다.";
+  word-break: keep-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 309px;
+  top: -10px;
+}
+
+.line29::before {
+  font-size: 8px;
+  transform: rotate(90deg);
+  content: "두 시간";
+  position: absolute;
+  word-break: keep-all;
+  max-width: 20px;
+  line-height: 22px;
+  left: 655px;
+  top: -20px;
+}
+
+.line29::after {
+  font-size: 8px;
+  content: "다시 말해 백이십 분이 지난 다음,";
+  word-break: keep-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 630px;
+  top: -25px;
+}
+
+.line30::before {
+  font-size: 8px;
+  transform: rotate(90deg);
+  content: "나는 그를 로마광장";
+  position: absolute;
+  word-break: break-all;
+  max-width: 20px;
+  line-height: 22px;
+  left: 55px;
+  top: -45px;
+}
+
+.line30::after {
+  font-size: 8px;
+  content: "그러니까 생라자르역 앞에서";
+  word-break: keep-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 50px;
+  top: -15px;
+}
+
+.line31::before {
+  font-size: 8px;
+  transform: rotate(90deg);
+  content: "만나게 되고";
+  position: absolute;
+  word-break: keep-all;
+  max-width: 20px;
+  line-height: 22px;
+  left: 275px;
+  top: -25px;
+}
+
+.line31::after {
+  font-size: 8px;
+  content: "또다시 보게 된다.";
+  word-break: keep-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 250px;
+  top: -15px;
+}
+
+.line32::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "그는 단추를";
+  position: absolute;
+  text-align: right;
+  word-break: keep-all;
+  max-width: 20px;
+  line-height: 22px;
+  left: 575px;
+  top: -35px;
+}
+
+.line32::after {
+  font-size: 10px;
+  content: "즉 코로조로 만든 동그라미 하나를";
+  word-break: keep-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 550px;
+  top: -33px;
+}
+
+.line33::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "그의 외투에";
+  position: absolute;
+  text-align: right;
+  word-break: keep-all;
+  max-width: 20px;
+  line-height: 22px;
+  left: 375px;
+  top: -35px;
+}
+
+.line33::after {
+  font-size: 10px;
+  content: "다시 말해 망토에 추가해 매달라고";
+  word-break: keep-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 30px;
+  line-height: 20px;
+  left: 350px;
+  top: -33px;
+}
+
+.line34::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "그에게 조언하며";
+  position: absolute;
+  text-align: right;
+  word-break: keep-all;
+  max-width: 40px;
+  line-height: 22px;
+  left: 475px;
+  top: -35px;
+}
+
+.line34::after {
+  font-size: 10px;
+  content: "또 부추기고 있는";
+  word-break: break-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 20px;
+  line-height: 20px;
+  left: 440px;
+  top: -30px;
+}
+
+.line35::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "친구";
+  position: absolute;
+  text-align: right;
+  word-break: keep-all;
+  max-width: 20px;
+  line-height: 22px;
+  left: 175px;
+  top: -15px;
+}
+
+.line35::after {
+  font-size: 10px;
+  content: "즉 벗 한 명과 ";
+  word-break: keep-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 20px;
+  line-height: 20px;
+  left: 150px;
+  top: -30px;
+}
+
+.line36::before {
+  font-size: 10px;
+  transform: rotate(90deg);
+  content: "함께 있으며";
+  position: absolute;
+  text-align: right;
+  word-break: keep-all;
+  max-width: 30px;
+  line-height: 22px;
+  left: 765px;
+  top: -35px;
+}
+
+.line36::after {
+  font-size: 10px;
+  content: "또한 자리하고 있다.";
+  word-break: break-all;
+  transform: rotate(90deg);
+  position: absolute;
+  max-width: 10px;
+  line-height: 20px;
+  left: 750px;
+  top: -83px;
+}
+
+.line37::before {
+  font-size: 15px;
+  transform: rotate(0deg);
+  content: " > > > > > > 다음으로 넘어가기 위해 클릭하시오 > > > > > >";
+  position: absolute;
+  text-align: right;
+  word-break: keep-all;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  left: 970px;
+  top: -27px;
+}
+
+.line37::after {
+  font-size: 15px;
+  content: " > > > > > > 나 말이야...";
+  word-break: break-all;
+  transform: rotate(0deg);
+  position: absolute;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  line-height: 20px;
+  left: 1070px;
+  top: 7px;
+}/*# sourceMappingURL=style6.css.map */

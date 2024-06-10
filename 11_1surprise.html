@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style11/style11.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이럴 수가!</title>
+</head>
+<body>
+    <section class="container">
+        <h1>!</h1>
+    </section>
+    <div class="bubbles">
+        <p class="bubble bubble1">오호라!</p>
+        <p class="bubble bubble2">정오로다!</p>
+        <p class="bubble bubble3">드뎌 버스에 오를 시간일세!</p>
+        <p class="bubble bubble4">사람들 좀 보게!</p>
+        <p class="bubble bubble5">저 많은 사람들!</p>
+        <p class="bubble bubble6">이렇게 낑기다니!</p>
+        <p class="bubble bubble7">아이고, 웃기시네!</p>
+        <p class="bubble bubble8">요 녀석 좀 보게!</p>
+        <p class="bubble bubble9">대갈통 좀 보소!</p>
+        <p class="bubble bubble10">이런 목을 다 봤나!</p>
+        <p class="bubble bubble11">오오!</p>
+        <p class="bubble bubble12">칠십 하고도 오 센티는 족히 되겠네!</p>
+        <p class="bubble bubble13">그것도 최소한으로!</p>
+        <p class="bubble bubble14">배배 꼰 줄!</p>
+        <p class="bubble bubble15">배배 꼰 줄!</p>
+        <p class="bubble bubble16">한 번도 못 봤는데!</p>
+        <p class="bubble bubble17">배배 꼰 줄!</p>
+        <p class="bubble bubble18">오늘의 하이라이트!</p>
+        <p class="bubble bubble19">바로 요거!</p>
+        <p class="bubble bubble20">배배 꼰 줄!</p>
+        <p class="bubble bubble21">모자를 빙 둘렀어!</p>
+        <p class="bubble bubble22">배배 꼰 줄!</p>
+        <p class="bubble bubble23">웃겨!</p>
+        <p class="bubble bubble24">완전 웃겨!</p>
+        <p class="bubble bubble25">옳거니!</p>
+        <p class="bubble bubble26">씩씩대는 그 인간!</p>
+        <p class="bubble bubble27">아까 그 배배 꼰 줄 사내로다!</p>
+        <p class="bubble bubble28">옆 사람한테!</p>
+        <p class="bubble bubble29">옆 사람한테 뭐라뭐라 하네!</p>
+        <p class="bubble bubble30">다른 사람이 그랬다네!</p>
+        <p class="bubble bubble31">그자가 발을 밟았다네!</p>
+        <p class="bubble bubble32">서로 싸대기를 날리겠지!</p>
+        <p class="bubble bubble33">확실해!</p>
+        <p class="bubble bubble34">아니라고!</p>
+        <p class="bubble bubble35">그게 맞다니까!</p>
+        <p class="bubble bubble36">어서!어서!</p>
+        <p class="bubble bubble37">눈탱이를 후려갈겨!</p>
+        <p class="bubble bubble38">덤비라고 어서!</p>
+        <p class="bubble bubble39">쳐!</p>
+        <p class="bubble bubble40">박살내버려!</p>
+        <p class="bubble bubble41">이런 염병할!</p>
+        <p class="bubble bubble42">그게 아니잖아!</p>
+        <p class="bubble bubble43">쫄았구먼!</p>
+        <p class="bubble bubble44">쫄보!</p>
+        <p class="bubble bubble45">그 자식 말야!</p>
+        <p class="bubble bubble46">목 긴 그놈!</p>
+        <p class="bubble bubble47">배배 꼰 줄!</p>
+        <p class="bubble bubble48">그 자식 빈자리로 토끼잖아!</p>
+        <p class="bubble bubble49">그래!</p>
+        <p class="bubble bubble50">그 녀석!</p>
+        <p class="bubble bubble51">물론이지!</p>
+        <p class="bubble bubble52">맞아!</p>
+        <p class="bubble bubble53">잘못 본 게 아니라고!</p>
+        <p class="bubble bubble54">아니라니까!</p>
+        <p class="bubble bubble55">그 남자라고!</p>
+        <p class="bubble bubble56">바로 저기 말이야!</p>
+        <p class="bubble bubble57">로마광장!</p>
+        <p class="bubble bubble58">생라자르역 앞!</p>
+        <p class="bubble bubble59">누군가 이리저리 걸어다니잖아!</p>
+        <p class="bubble bubble60">다른 남자랑!</p>
+        <p class="bubble bubble61">이 작자, 그 자식한테 말하는 걸 똑똑히 보라고!</p>
+        <p class="bubble bubble62">단추 하나 더 달라고 하네!</p>
+        <p class="bubble bubble63">아, 글쎄, 맞다니까!</p>
+        <p class="bubble bubble64">외투에 단추 하나 더!</p>
+        <p class="bubble bubble65">그 녀석 외투에다가!</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const bubbles = document.querySelectorAll('.bubble');
+            let index = 0;
+            const maxBubbles = bubbles.length;
+
+            function getRandomPosition() {
+                const x = Math.random() * (window.innerWidth - 100);
+                const y = Math.random() * (window.innerHeight - 50);
+                return { x, y };
+            }
+
+            function animateBubble(bubble) {
+                const { x, y } = getRandomPosition();
+                bubble.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            function showBubbles() {
+                for (let i = 0; i < 2; i++) {
+                    if (index < maxBubbles) {
+                        const bubble = bubbles[index];
+                        bubble.style.display = 'block';
+                        animateBubble(bubble);
+                        index++;
+                    }
+                }
+            }
+
+            document.querySelector('h1').addEventListener('click', () => {
+                showBubbles();
+                setInterval(() => {
+                    document.querySelectorAll('.bubble').forEach(animateBubble);
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

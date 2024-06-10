@@ -1,0 +1,78 @@
+* {
+  word-break: keep-all;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+.geometry {
+  display: block;
+  width: 100%;
+  background-color: darkslateblue;
+  height: 100%;
+}
+.geometry #note {
+  display: block;
+  position: absolute;
+  top: 5vw;
+  left: 10vw;
+  max-width: 20vw;
+  font-size: 17px;
+  border: 1px solid black;
+  padding: 30px;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  line-height: 32px;
+}
+.geometry p {
+  display: block;
+  position: absolute;
+  top: 10vw;
+  left: 20vw;
+  max-width: 20vw;
+  font-size: 17px;
+  border: 1px solid black;
+  padding: 30px;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  line-height: 32px;
+}
+
+#answerspace {
+  position: absolute;
+  top: 9vw;
+  left: 40vw;
+  max-width: 20vw;
+  font-size: 17px;
+  padding: 10px;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+  color: rgb(0, 0, 0);
+  line-height: 32px;
+}
+
+#answerspace input {
+  font-family: serif;
+  width: 90%;
+  font-size: 15px;
+  padding: 7px 7px;
+  margin: 10px;
+}
+
+#answerspace button {
+  width: 90%;
+  font-weight: 500;
+  font-family: serif;
+  font-size: 17px;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 7px;
+}/*# sourceMappingURL=style23.css.map */

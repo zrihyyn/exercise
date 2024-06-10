@@ -1,0 +1,56 @@
+:root {
+  --hover-bg-color: rgb(246, 205, 205);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  word-break: keep-all;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  top: 0;
+}
+
+.story {
+  display: block;
+  width: 100vw;
+  padding: 30px;
+  height: 70vh;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+}
+
+p {
+  margin: 20px;
+  background-color: white;
+  padding: 16px 20px;
+  color: rgb(197, 0, 0);
+  border: solid 1.5px rgb(197, 0, 0);
+}
+
+#paragraph {
+  font-weight: normal;
+  margin: 20px 20vw;
+  padding: 30px 40px;
+  justify-content: center;
+  line-height: 42px;
+  color: rgb(197, 0, 0);
+  border: none;
+}
+
+p:hover {
+  background-color: var(--hover-bg-color);
+  cursor: pointer;
+}/*# sourceMappingURL=style31.css.map */

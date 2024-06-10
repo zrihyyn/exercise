@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대질 심문</title>
+<body>
+    <style>
+        *, *:before, *:after { box-sizing: border-box; }
+    
+        :root {
+          --font-family: sans-serif;
+          --body-bg: #eee;
+          --frame-border: 5px solid black;
+          --frame-bg: rgba(255,255,255,1);
+          --frame-blur: blur(10px);
+          --color-text: #111;
+          --color-subtext: #777;
+          --space-1: 20px;
+          --font: clamp(1.4rem, 3vw, 1.4rem)/1.35 var(--font-family);
+          --frame-width: 100%;
+          --frame-max-width: 100%;
+          --frame-height: calc(100vh);
+          --noise: url('/images/noise.png');
+        }
+    
+        @media screen and (min-width: 500px) {
+          :root {
+            --frame-max-width: 373px;
+            --frame-height: calc(100vh - 80px);
+          }
+        }
+    
+        html, body { margin: 0; padding: 0; }
+    
+        html {
+          height: -webkit-fill-available;
+        }
+    
+        body {
+          background: var(--body-bg);
+          font: var(--font);
+          position: relative;
+          color: var(--color-text);
+          overflow: hidden;
+          min-height: -webkit-fill-available;
+          display: grid;
+          place-items: center;
+          min-height: 100vh;
+          min-height: -webkit-fill-available;
+        }
+    
+        @media screen and (min-width:500px) {
+          body {
+            padding-top: var(--space-1);
+            padding-left: var(--space-1);
+            padding-right: var(--space-1);
+            padding-bottom: var(--space-1);
+          }
+        }
+    
+        .container {
+          display: flex;
+          width: calc(var(--frame-width) + 8px);
+          min-height: 100vh;
+          min-height: -webkit-fill-available;
+          overflow: scroll;
+          scroll-snap-type: x mandatory;
+          gap: 5px;
+          margin: 0 0 0 -3px;
+          border: var(--frame-border);
+          background: black;
+          -ms-overflow-style: none;  
+          scrollbar-width: none;  
+        }
+    
+        @media screen and (min-width:500px) {
+          .container {
+            max-width: var(--frame-max-width);
+            margin: 0 auto;
+          }
+        }
+    
+        .container:after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          opacity: 0.2;
+          background: url('/images/noise.png');
+        }
+    
+        .container::-webkit-scrollbar { 
+          display: none;  
+        }
+    
+        h1 {
+          font-stretch: 2%;
+          font-size: clamp(4rem, 6.4vw, 4.5rem);
+          line-height: 0.9;
+          font-weight: 600;
+          margin-top: 0;
+          margin-bottom: 100px;
+        }
+    
+        .frame {
+          scroll-snap-align: start;
+          display: grid;
+          place-items: center;
+          position: relative;
+          min-width: var(--frame-width);
+          min-height: 100vh;
+          min-height: -webkit-fill-available;
+          
+          
+        }
+    
+        @media screen and (min-width:500px) {
+          .container {
+            width: var(--frame-max-width);
+            margin: 0 auto;
+          }
+        }
+    
+        .frame img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          z-index: 0;
+          height: 100%;
+          width: 100%;
+        }
+    
+        .frame-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 320px;
+          min-width: 100%;
+          z-index: 1;
+          padding: 20px;
+          position: relative;
+          background: var(--frame-bg);
+          backdrop-filter: var(--frame-blur);  
+          word-break: keep-all;
+          line-height: 1.6;
+        }
+    
+        .frame-text-welcome {
+          display: grid;
+          place-items: center;
+          z-index: 3;
+          position: relative;
+          margin-top: 50%;
+          margin-bottom: auto;
+          width: 100%;
+          text-align: center;
+          padding: 0px 25px;
+          font-weight: 600;
+          font-size: 70%;
+          text-transform: uppercase;
+        }
+    
+        .frame-text-welcome svg {
+          max-width: 100px;
+          margin: 0 auto 20px auto;
+        }
+    
+        .frame-text p {
+          margin-top: 0;
+        }
+    
+        .frame-text p:only-child {
+          margin: 0;
+        }
+    
+        blockquote {
+          margin: 0;
+        }
+    
+        blockquote p {
+          hyphens: auto;
+        }
+    
+        blockquote:after,
+        blockquote:before {
+          opacity: 0.2;
+          line-height: 0;
+          display: block;
+          font-size: 2.4em;
+          color: var(--color-text);
+          position: absolute;
+        }
+    
+        blockquote:before {
+          content: "❝";
+          top: 25px;
+          left: 15px;
+        }
+        
+        blockquote:after {
+          content: "❞";
+          bottom: 32px;
+          right: 20px;
+        }
+    
+        .meta {
+          color: var(--color-subtext);
+          font-size: 90%;
+        }
+    
+        a {
+          color: inherit; 
+          transition: font-weight 0.3s ease;
+        }
+    
+        a:hover {
+          font-weight: 900;
+          color: rgb(146, 0, 0);
+        }
+    
+        .input-email, .input-submit {
+          font-family: var(--font-family);
+          padding: 5px;
+          font-size: 1rem;
+          text-align: center;
+        }
+    
+        .input-email {
+          display: block;
+          width: 100%;
+          margin-top: 20px;
+          height: 45px;
+        }
+    
+        .input-submit {
+          background-color: #111;
+          color: white;
+          display: block;
+          width: 100%;
+          margin-top: 10px;
+          height: 45px;
+          border: none;
+          border-radius: 3px;
+        }
+    
+        .input-submit:hover {
+          cursor: pointer;
+        }
+    
+        .center { text-align: center; }
+      </style>
+    </head>
+    <body style="background: linear-gradient(-180deg, #05082a -6%, #999 100% );">
+    
+      <div class="container">
+        <div class="frame">
+          <div class="frame-text center">
+            <p>시작하겠습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame frame-title">
+          <div class="frame-text">
+            <h1>대질 심문</h1>
+            <div class="meta">11개의 질문, 11개의 답변</div>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/Accès_Station_Métro_Porte_Champerret_Avenue_Villiers_-_Paris_XVII_(FR75)_-_2022-01-30_-_1.jpg" alt="" /> 
+          <div class="frame-text">
+            <p>Q. 포르트드샹페레 방향, 12시 23분 도착 예정 S선 버스가 지나간 건 정확히 몇시였다고 합니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>A. 12시 38분이었습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/bus crowded.jpeg" alt="" /> 
+          <div class="frame-text">
+            <p>Q. 전술한 S선 버스에는 사람들이 많았습니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>A. 대만원이었습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 거기서 어떤 특이 사항을 목격했다고 하겠습니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/longneck 복사본.jpg" alt="" /> 
+          <div class="frame-text">
+            <p>A. 매우 긴 목을 가진 남자 하나가 특이하게도, 꼰 줄을 주위에 두른 모자를 쓰고 있었습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 그 남자, 복장과 체형만큼이나 행동도 특이했습니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>A. 처음에는 아니라고 생각했습니다. 얼핏 보기에 그는 정상이었거든요.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/blue 복사본.jpg" alt="" /> 
+          <div class="frame-text">
+            <p>&hellip;<br>그러나 결국 그 작자는 위산과다로 인한 울화 상태에서 가벼운 저혈압을 동반한 편집증적 우울증환자임이 밝혀졌습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 그런 사실을 어떻게 알게 되었다고 하겠습니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/rccm_anger1.jpg" alt="" /> 
+          <div class="frame-text">
+            <p>A. 문제의 그 남자는 승객들이 오르고 내릴 때마다 일부러 자기 발을 밟은 것은 아니냐고 따져물으면서 다소간 질질짜듯 불평 가득한 목소리로 옆 사람을 불러세웠다고 말씀드리겠습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 그 남자의 비난은 근거가 있었습니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>A. 거기에 대해서 저는 잘 모르겠습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 그 사건은 어떻게 마무리되었다고 합니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/rush aw.jpeg" alt="" /> 
+          <div class="frame-text">
+            <p>A. 빈자리를 차지하러 갔다고 하는 이 젊은이의 성급한 도주로 마무리되었습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 사건은 다시 발생했다고 합니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/clock.jpeg" alt="" /> 
+          <div class="frame-text">
+            <p>A. 두 시간이 채 지나지 않아 그랬습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 구체적으로 어떤 내용입니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/sur.jpeg" alt="" /> 
+          <div class="frame-text">
+            <p>A. 돌아오는 길에 이자가 다시 나타났습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 어디서, 어떻게, 당신은 그를 다시 보았습니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/rome.jpeg" alt="" /> 
+          <div class="frame-text">
+            <p>A. 버스를 타고 로마광장 앞을 지나면서였습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <div class="frame-text">
+            <p>Q. 그 남자는 거기서 무얼 하고 있었습니까?</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/fas.jpeg" alt="" /> 
+          <div class="frame-text">
+            <p>A. 그 남자는 옷맵시에 대한 충고를 듣고 있었습니다.</p>
+          </div>
+        </div>
+    
+        <div class="frame">
+          <img src="/dark-red-color-solid-background-1920x1080.png" alt="" /> 
+          <div class="frame-text">
+            <p><a href="/8_2yellow.html" style="letter-spacing: 2px;">지금 말을 지어내는 것은 아니지요?</a></p>
+          </div>
+        </div>
+    
+    
+    
+      <script>
+        const container = document.querySelector('.container');
+        const emailInput = document.querySelector('.input-email');
+        const emailSubmit = document.querySelector('.input-submit');
+        const gradientValue = getComputedStyle(document.documentElement)
+        .getPropertyValue('--gradient');
+    
+        function turnPageForward() {
+          container.scrollLeft = container.scrollLeft + 200;
+        }
+    
+        function turnPageBack() {
+          container.scrollLeft = container.scrollLeft - 200;
+        }
+    
+        document.addEventListener("click", (e) => {
+          if(e.clientX > window.innerWidth / 2) {
+            turnPageForward();
+          }
+    
+          if(e.clientX < window.innerWidth / 2) {
+            turnPageBack();
+          }
+        });
+    
+        emailInput.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+    
+        emailSubmit.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+    
+        document.addEventListener("keydown", (e) => {
+          if (event.keyCode === 37) { 
+            e.preventDefault();
+            turnPageBack();
+          }
+          if ((event.keyCode === 39) || (event.keyCode === 32)) { 
+            e.preventDefault();
+            turnPageForward();
+          }
+        });
+      </script>
+    </body>
+    </html>

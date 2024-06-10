@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Director";
+  src: url("https://hub.xpub.nl/chopchop/~v/hdwgh/fonts/Director-Light.otf");
+}
+* {
+  font-family: "Director";
+  word-break: keep-all;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.title {
+  background-color: rgb(127, 138, 255);
+  border-bottom: 1px solid black;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.title:hover {
+  background: yellow;
+}
+
+.content {
+  padding: 20px;
+  display: none;
+  border-bottom: 1px solid black;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  background-color: yellow;
+}/*# sourceMappingURL=style22.css.map */

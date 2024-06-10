@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style5/style5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함께 그려보아요</title>
+</head>
+<body>
+    <div id="square" style="clip-path: initial; background-color: white;">
+        <img src="/aiimage.png" alt="Background Image" style="visibility: hidden;">
+    </div>
+    <div class="textbox">
+        전체적으로 볼 때는 <span style="font-weight: bold;">초록색</span>이라 하겠는데, 지붕은 <span style="font-weight: bold;">하얗고</span>, 옆으로 길쭉한 모양에, 또 창유리가 몇 개 있어요. 초보자는 이거, 그러니까 창유리를 그리는 게 아무래도 좀 어렵겠지요? 승강대는 별다른 색이 없어요. 그런데 음... 
+        굳이 말하자면, 반절은 <span style="font-weight: bold;">회색</span>, 반절은 <span style="font-weight: bold;">밤색</span> 정도랄까. 
+        무엇보다도 곡선이 정말 많아요. 특히 S자 모양이 무더기로 있다고 하는 게 좋겠네. 정오라는 게 대개 혼잡한 시간대고, 결국은 모든 게 엉망으로 뒤엉키게 마련이기 때문이에요. 마무리를 잘하려면, 너저분한 부분 밖으로 
+        <span style="font-weight: bold;">옅은 황토색</span> 직사각형 모양을 다소 늘려야 하고, 거기에 <span style="font-weight: bold;">연한 황토색</span>으로 달걀 모양을 심어놔야 하며,
+        또 그 위에다가 <span style="font-weight: bold;">짙은 황토색</span>으로 칠한 모자를 붙여야 하는데, 모자에는 <span style="font-weight: bold;">불그스름하고
+            짙은 황갈색</span>의 헝클어진 끈을 둘러놓으면 좋겠어요. 그 다음으로, 짜증을 표현하는 <span style="font-weight: bold;">거위 똥색</span> 굵은 점 하나, 분노를 나타내는 
+            <span style="font-weight: bold;">진홍빛</span> 삼각형 모양 하나, 그리고 벌벌 떨며 도망치는 모습과 겁을 잔뜩 집어먹은 꼴을 나타내는 
+            <span style="font-weight: bold;">푸른색</span> 물줄기 하나를 시원하게 그려넣어도 좋을 것 같아요.
+    </div>
+    <div class="textbox2">
+        여기까지 했으면, 이제 근사하고 예쁘고 멋진 <span style="font-weight: bold;">마린블루</span> 코트를 한번 그려볼까요. 코트 위쪽, 목둘레 바로 아래에, 꼼꼼하게 묘사한, 근사하고 예쁘고 멋진 단추 하나를 달아주는 거예요.
+    </div>
+    <div class="textbox3">
+        <a href="/7_1sound.html">근데 무슨 소리가 들리지 않나요?</a>
+    </div>
+</body>
+<script>
+
+var square = document.getElementById("square");
+    
+    // Add event listeners for mousemove
+    square.addEventListener("mousemove", updateClipPath);
+
+    function updateClipPath(event) {
+
+        var x = event.clientX;
+        var y = event.clientY;
+        console.log(x,y);
+       
+        
+
+        // Calculate clip path position based on mouse position for a square
+        var halfSquareSize = 100; // Adjust the size of the square
+        var clipPath = "inset(" + (y - halfSquareSize) + "px " + (window.innerWidth - x - halfSquareSize) + "px " + (window.innerHeight - y - halfSquareSize) + "px " + (x - halfSquareSize) + "px)";
+        
+        // Apply the clip path to the #square div
+        square.style.clipPath = clipPath;
+
+        // Show the image when the mouse is over
+        square.querySelector("img").style.visibility = "visible";
+    }
+
+    // Add event listener for mouseout to hide the image and reset clip path
+    square.addEventListener("mouseout", hideImage);
+
+    function hideImage() {
+        square.style.backgroundColor = "white";
+        square.style.clipPath = "initial";
+        square.querySelector("img").style.visibility = "hidden";
+    }
+
+</script>
+</html>

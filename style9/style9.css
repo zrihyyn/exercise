@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  border: 1px black solid;
+  padding: 30px;
+  margin: 40px;
+}
+.container p {
+  margin: 15px;
+  line-height: 30px;
+}
+
+.test1 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 210px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test2 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 60px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test3 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 60px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test4 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 120px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test5 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 60px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test6 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 210px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test7 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 145px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test8 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 90px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test9 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 90px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test10 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 150px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test11 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 90px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test12 {
+  white-space: nowrap;
+  padding: 8px;
+  width: 320px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-overflow: ellipsis;
+  cursor: help;
+}
+
+.test13 {
+  padding: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+  background-color: #9fff32;
+  border: 1px solid #000000;
+  cursor: help;
+  float: right;
+  padding: 20px;
+  margin: 30px;
+}
+
+.test1:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test2:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test3:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test4:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test5:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test6:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test7:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test8:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test9:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test10:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test11:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+.test12:hover {
+  overflow: visible;
+  background-color: #9fff32;
+}
+
+a {
+  display: inline;
+  float: right;
+  color: #000000;
+}/*# sourceMappingURL=style9.css.map */

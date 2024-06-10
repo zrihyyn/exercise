@@ -1,0 +1,88 @@
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  word-break: keep-all;
+}
+
+body * {
+  z-index: 20;
+  color: #000;
+  font-family: sans-serif;
+}
+
+#light {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: inset 0px 0px 150px 166px rgb(0, 0, 0);
+}
+
+li a:hover {
+  color: rgb(84, 227, 255);
+}
+
+.navigation {
+  position: relative;
+  top: 50px;
+  float: left;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.text-container {
+  position: relative;
+  width: 80%;
+  top: 50px;
+  float: right;
+}
+
+li {
+  margin: 20px;
+  text-decoration: none;
+}
+
+#fs {
+  position: relative;
+  color: #000;
+  margin: 20px;
+  cursor: pointer;
+}
+
+p {
+  position: relative;
+  line-height: 30px;
+  max-width: 50vw;
+}
+
+.bottom-links {
+  position: relative;
+}
+
+.chapter-select {
+  list-style: none;
+  float: left;
+  margin-top: 20px;
+}
+
+.share-chapter {
+  list-style: none;
+  float: right;
+  margin-top: 20px;
+}
+
+.chapter-select li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.share-chapter li {
+  display: inline-block;
+}
+
+.share-chapter img {
+  width: 35px;
+}/*# sourceMappingURL=style20.css.map */

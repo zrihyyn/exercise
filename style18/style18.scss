@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Director";
+    src: url('https://hub.xpub.nl/chopchop/~v/hdwgh/fonts/Director-Light.otf');
+  }
+  
+  
+  
+  
+  body, html {
+      height: 100%;
+      margin: 0;
+      font-family: "Director";
+      font-weight:100;
+  }
+  
+  
+  a {
+      color: rgb(189, 189, 189);
+      font-size: 20px; 
+    
+  }
+  
+  .container {
+      display: flex;
+     
+  }
+  
+  .left-column, .middle-column, .right-column {
+      flex: 1;
+  }
+  
+  .left-column {
+      padding: 20px;
+  }
+  
+  .image {
+      margin-bottom: 180px;
+      margin-left: 50px;
+      margin-top: 50px;
+      
+  }
+  
+  .image img {
+     
+      height: 220px;
+  }
+  
+  .middle-column {
+      flex: 2;
+      padding: 20px;
+      position: relative;
+  }
+  
+  .line1 {
+      position: absolute;
+      font-size: 16px; 
+       top: 2%;
+      left: 20%;
+  }
+  .scattered-words {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .word {
+      position: absolute;
+      font-size: 16px; /* Adjust font size as needed */
+  }
+  
+  .word.word1 {
+      top: 7%;
+      left: 40%;
+      transform: rotate(-10deg); /* Adjust rotation angle */
+  }
+  
+  .word.word2 {
+      top: 12%;
+      left: 40%;
+      transform: rotate(10deg); /* Adjust rotation angle */
+  }
+  
+  .word.word3 {
+      top: 17%;
+      left: 50%;
+      transform: rotate(-60deg); /* Adjust rotation angle */
+  }
+  
+  .word.word4 {
+      top: 20%;
+      left: 40%;
+      transform: rotate(-20deg); /* Adjust rotation angle */
+  }
+  
+  .word.word5 {
+      top: 25%;
+      left: 60%;
+      transform: rotate(30deg); /* Adjust rotation angle */
+  }
+  
+  
+  .word.word6 {
+      top: 30%;
+      left: 30%;
+      transform: rotate(0deg); /* Adjust rotation angle */
+  }
+  
+  
+  
+  .word.word7 {
+      top: 37%;
+      left: 20%;
+      transform: rotate(-35deg); /* Adjust rotation angle */
+  }
+  
+  
+  .word.word8 {
+      top: 39%;
+      left: 39%;
+      transform: rotate(-12deg); /* Adjust rotation angle */
+  }
+  
+  
+  .word.word9 {
+      top: 45%;
+      left: 40%;
+      transform: rotate(80deg); /* Adjust rotation angle */
+  }
+  
+  .word.word10 {
+      top: 54%;
+      left: 64%;
+      transform: rotate(50deg); /* Adjust rotation angle */
+  }
+  
+  .word.word11 {
+      top: 64%;
+      left: 7%;
+      transform: rotate(-18deg); /* Adjust rotation angle */
+  }
+  
+  .word.word12 {
+      top: 68%;
+      left: 60%;
+      transform: rotate(90deg); /* Adjust rotation angle */
+  }
+  
+  .word.word13 {
+      top: 75%;
+      left: 30%;
+      transform: rotate(-10deg); /* Adjust rotation angle */
+  }
+
+  .word.word14 {
+    top: 77%;
+    left: 40%;
+    transform: rotate(0deg); /* Adjust rotation angle */
+}
+
+.word.word15 {
+    top: 83%;
+    left: 70%;
+    transform: rotate(38deg); /* Adjust rotation angle */
+}
+
+.word.word16 {
+    top: 88%;
+    left: 50%;
+    transform: rotate(-5deg); /* Adjust rotation angle */
+}
+
+.word.word17 {
+    top: 90%;
+    left: 20%;
+    transform: rotate(10deg); /* Adjust rotation angle */
+}
+  
+  .right-column {
+      flex: 1; /* Adjusted width relative to other columns */
+      display: flex;
+      
+  }
+  
+  .vertical-image::before{
+      content: "";
+      position: fixed;
+      width:100%;
+      height: 30vh;
+      background: white;
+  }
+  
+  .vertical-image::after{
+      content: "";
+      width:100%;
+      position: fixed;
+      bottom: 0;
+      left:75%;
+      height: 25vh;
+      background: white;
+  }
+  
+  .vertical-image img {
+      max-height: 350vh;
+      max-width: 100%;
+      transition: clip-path 0.5s ease; /* Smooth transition for clip-path change */
+      transition: 1s all;
+      padding-bottom: 130px;
+  }
+  
+  
+
+  #square {
+      z-index: -1;
+  }
+  
+  #square img {
+      width: 100%;
+      height: 100%;
+      
+  }
+  
+  
+  .navigation {
+      width: 20vw;
+      background: rgb(255, 255, 255);
+       
+      max-width: 25ch;
+      font-family: "Director";
+      font-size: 16px;
+      position: absolute;
+      top: 100%;
+      left: 250px;
+      
+  }
+  

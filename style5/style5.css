@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 30px;
+  word-break: keep-all;
+}
+
+#square {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  transition: background-color 0.5s ease;
+  overflow: hidden;
+}
+
+.textbox {
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  max-width: 40vw;
+  font-size: 16px;
+  top: 25vh;
+  left: 10vw;
+  position: absolute;
+  padding: 7px;
+  word-spacing: 6px;
+}
+
+.textbox2 {
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  max-width: 15vw;
+  font-size: 16px;
+  top: 65vh;
+  left: 60vw;
+  padding: 5px;
+  position: absolute;
+  text-decoration: none;
+  word-spacing: 6px;
+}
+
+a {
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  max-width: 30ch;
+  font-size: 16px;
+  top: 10vh;
+  left: 75vw;
+  padding: 10px;
+  position: absolute;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: bold;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+}/*# sourceMappingURL=style5.css.map */

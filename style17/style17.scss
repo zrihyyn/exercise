@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.backforth, .middle {
+    width: 50vw;
+    height: 100vh;
+    position: relative; 
+}
+
+img {
+    max-width: fit-content;
+    position: absolute; 
+    transform: scale(50%);
+    opacity: 0;
+    animation: fade 4s infinite; 
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+p{
+    margin: 40px;
+    padding: 5px;
+    display: inline-block;
+    
+    #front{
+        color: rgb(253, 53, 86);
+    }
+}
+
+.backforth {
+    background-color:rgb(46, 5, 29);
+    .green {
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%) scale(50%); 
+        top: calc(50%); 
+        left: calc(50%); 
+        animation-delay: 0s; 
+    }
+
+    .pink {
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%) scale(50%);
+        top: calc(50% + 0.2px); 
+        left: calc(50% + 12.5px); 
+        animation-delay: 2.5s; 
+    }
+}
+
+.middle {
+    background-color: rgb(255, 255, 255);
+    .red {
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%) scale(50%);
+        z-index: 100;
+        top: calc(50% + 5px); 
+        left: calc(50% - 17px); 
+        animation-delay: 0s; 
+    }
+
+    .grey {
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%) scale(50%); 
+        z-index: 1;
+        top: calc(50%); 
+        left: calc(50%);
+        animation-delay: 3s; 
+    }
+}
+
+.navigate-button {
+    margin: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgb(223, 223, 223);
+    color: #860e60;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    z-index: 200; 
+  }
+  
+  .navigate-button:hover {
+    background-color: #e0e0e0;
+    color: rgb(15, 153, 52);
+  }

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    word-break: keep-all;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.textbox0, .textbox1, .textbox2, .textbox3, .textbox4, .textbox5, .textbox6 {
+    display: block;
+    position: absolute;
+    width: 300px;
+}
+.audio-span{
+    text-decoration: underline;
+}
+.textbox0 { top: 40px; left: 40px; }
+.textbox1 { top: 110px; left: 230px; width: 250px; }
+.textbox2 { top: 160px; left: 400px; }
+.textbox3 { top: 220px; left: 600px; }
+.textbox4 { top: 320px; left: 800px; width: 280px; }
+.textbox5 { top: 520px; left: 1000px; }
+.textbox6 { top: 720px; left: 1200px; width: 270px; }
+
+.audio-span:hover{
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='44' height='53' viewport='0 0 100 100' style='fill:black;font-size:26px;'><text y='50%'>👂</text></svg>") 16 0,auto; /*!emojicursor.app*/;
+    color: rgb(172, 172, 172);
+}
+
+.overlay {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    z-index: 9999;
+    cursor: e-resize;
+}
+
+.down {
+    position: fixed;
+    bottom: 0;
+    background: black;
+    color: white;
+}
